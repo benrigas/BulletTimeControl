@@ -17,7 +17,7 @@ class GIFWriter: NSObject {
     
     //swift 2.0 translation/adaptation from https://gist.github.com/akisute/1141953
     //NSImage extension to export an array of NSImages to an animated gif at a given location
-    func exportAnimatedGif(toFilePath filePath: NSURL, withImages images: [NSImage]) -> Bool {
+    static func exportAnimatedGif(toFilePath filePath: NSURL, withImages images: [NSImage]) -> Bool {
         guard let fileDestination: CGImageDestination = CGImageDestinationCreateWithURL((filePath as CFURL), kUTTypeGIF, images.count, nil) else {
             return false
         }

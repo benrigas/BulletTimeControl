@@ -12,23 +12,27 @@ class CameraImageRetreiver: NSObject {
 
     let url: URL
     let cameraNumber: Int
+    var delegate: CameraImageRetreiverDelegate?
     
     init(cameraNumber: Int, urlString: String) {
         self.url = URL(string: urlString)!
         self.cameraNumber = cameraNumber
     }
     
-    func retreive(delay: Int, completion: @escaping (_ image: NSImage?) -> Void) {
+    func retreive(delay: Int) {
         
         let task = URLSession.shared.dataTask(with: self.url) { (data, response, error) in
-            var image: NSImage?
-            if let data = data {
-                image = NSImage(data: data)
+            if let data = data, let image = NSImage(data: data) {
+                self.delegate?.imageRetrieved(cameraNumber: self.cameraNumber, image: image)
+            } else {
+                print("Something went wrong, missed image from camera \(self.cameraNumber)")
             }
-            completion(image)
         }
         
         task.resume()
     }
-    
+}
+
+protocol CameraImageRetreiverDelegate {
+    func imageRetrieved(cameraNumber: Int, image: NSImage)
 }
