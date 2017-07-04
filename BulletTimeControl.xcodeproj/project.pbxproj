@@ -12,6 +12,17 @@
 		2109BBC71F0A648B0042F873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2109BBC61F0A648B0042F873 /* Assets.xcassets */; };
 		2109BBCA1F0A648B0042F873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2109BBC81F0A648B0042F873 /* Main.storyboard */; };
 		2109BBD51F0A648B0042F873 /* BulletTimeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBD41F0A648B0042F873 /* BulletTimeControlTests.swift */; };
+		2109BBE01F0A650D0042F873 /* CameraImageRetreiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBDF1F0A650D0042F873 /* CameraImageRetreiver.swift */; };
+		2109BBE11F0A650D0042F873 /* CameraImageRetreiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBDF1F0A650D0042F873 /* CameraImageRetreiver.swift */; };
+		2109BBE31F0A78720042F873 /* BulletTimeCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBE21F0A78720042F873 /* BulletTimeCapture.swift */; };
+		2109BBE41F0A78720042F873 /* BulletTimeCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBE21F0A78720042F873 /* BulletTimeCapture.swift */; };
+		2109BBE91F0BD3380042F873 /* GIFWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBE81F0BD3380042F873 /* GIFWriter.swift */; };
+		2109BBEA1F0BD3380042F873 /* GIFWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BBE81F0BD3380042F873 /* GIFWriter.swift */; };
+		2109BBFD1F0BD3F70042F873 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2109BBF81F0BD3F70042F873 /* 4.jpeg */; };
+		2109BBFF1F0BD3F70042F873 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2109BBF91F0BD3F70042F873 /* 1.jpeg */; };
+		2109BC011F0BD3F70042F873 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2109BBFA1F0BD3F70042F873 /* 2.jpeg */; };
+		2109BC031F0BD3F70042F873 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2109BBFB1F0BD3F70042F873 /* 3.jpeg */; };
+		2109BC051F0BD4210042F873 /* TestGifWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BC041F0BD4210042F873 /* TestGifWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,14 @@
 		2109BBD01F0A648B0042F873 /* BulletTimeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulletTimeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2109BBD41F0A648B0042F873 /* BulletTimeControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTimeControlTests.swift; sourceTree = "<group>"; };
 		2109BBD61F0A648B0042F873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2109BBDF1F0A650D0042F873 /* CameraImageRetreiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageRetreiver.swift; sourceTree = "<group>"; };
+		2109BBE21F0A78720042F873 /* BulletTimeCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletTimeCapture.swift; sourceTree = "<group>"; };
+		2109BBE81F0BD3380042F873 /* GIFWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFWriter.swift; sourceTree = "<group>"; };
+		2109BBF81F0BD3F70042F873 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 4.jpeg; path = ../BulletTimeControl/4.jpeg; sourceTree = "<group>"; };
+		2109BBF91F0BD3F70042F873 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpeg; path = ../BulletTimeControl/1.jpeg; sourceTree = "<group>"; };
+		2109BBFA1F0BD3F70042F873 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpeg; path = ../BulletTimeControl/2.jpeg; sourceTree = "<group>"; };
+		2109BBFB1F0BD3F70042F873 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpeg; path = ../BulletTimeControl/3.jpeg; sourceTree = "<group>"; };
+		2109BC041F0BD4210042F873 /* TestGifWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGifWriter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +99,9 @@
 				2109BBC61F0A648B0042F873 /* Assets.xcassets */,
 				2109BBC81F0A648B0042F873 /* Main.storyboard */,
 				2109BBCB1F0A648B0042F873 /* Info.plist */,
+				2109BBDF1F0A650D0042F873 /* CameraImageRetreiver.swift */,
+				2109BBE21F0A78720042F873 /* BulletTimeCapture.swift */,
+				2109BBE81F0BD3380042F873 /* GIFWriter.swift */,
 			);
 			path = BulletTimeControl;
 			sourceTree = "<group>";
@@ -87,8 +109,13 @@
 		2109BBD31F0A648B0042F873 /* BulletTimeControlTests */ = {
 			isa = PBXGroup;
 			children = (
+				2109BBF81F0BD3F70042F873 /* 4.jpeg */,
+				2109BBF91F0BD3F70042F873 /* 1.jpeg */,
+				2109BBFA1F0BD3F70042F873 /* 2.jpeg */,
+				2109BBFB1F0BD3F70042F873 /* 3.jpeg */,
 				2109BBD41F0A648B0042F873 /* BulletTimeControlTests.swift */,
 				2109BBD61F0A648B0042F873 /* Info.plist */,
+				2109BC041F0BD4210042F873 /* TestGifWriter.swift */,
 			);
 			path = BulletTimeControlTests;
 			sourceTree = "<group>";
@@ -185,6 +212,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2109BC011F0BD3F70042F873 /* 2.jpeg in Resources */,
+				2109BBFF1F0BD3F70042F873 /* 1.jpeg in Resources */,
+				2109BC031F0BD3F70042F873 /* 3.jpeg in Resources */,
+				2109BBFD1F0BD3F70042F873 /* 4.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2109BBC51F0A648B0042F873 /* ViewController.swift in Sources */,
+				2109BBE31F0A78720042F873 /* BulletTimeCapture.swift in Sources */,
+				2109BBE91F0BD3380042F873 /* GIFWriter.swift in Sources */,
 				2109BBC31F0A648B0042F873 /* AppDelegate.swift in Sources */,
+				2109BBE01F0A650D0042F873 /* CameraImageRetreiver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2109BBD51F0A648B0042F873 /* BulletTimeControlTests.swift in Sources */,
+				2109BBE11F0A650D0042F873 /* CameraImageRetreiver.swift in Sources */,
+				2109BBE41F0A78720042F873 /* BulletTimeCapture.swift in Sources */,
+				2109BBEA1F0BD3380042F873 /* GIFWriter.swift in Sources */,
+				2109BC051F0BD4210042F873 /* TestGifWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
