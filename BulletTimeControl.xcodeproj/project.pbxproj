@@ -25,6 +25,8 @@
 		2109BC051F0BD4210042F873 /* TestGifWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BC041F0BD4210042F873 /* TestGifWriter.swift */; };
 		2109BC0A1F0BDAB20042F873 /* CameraImageRetrieverCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BC091F0BDAB20042F873 /* CameraImageRetrieverCollection.swift */; };
 		2109BC0B1F0BDAB20042F873 /* CameraImageRetrieverCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2109BC091F0BDAB20042F873 /* CameraImageRetrieverCollection.swift */; };
+		21950C2D1F51D33A003A92B4 /* CameraSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950C2C1F51D33A003A92B4 /* CameraSettingsViewController.swift */; };
+		21950C2E1F51D33A003A92B4 /* CameraSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21950C2C1F51D33A003A92B4 /* CameraSettingsViewController.swift */; };
 		21DC04691F1A68DA0097CABB /* 1out0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DC044B1F1A68DA0097CABB /* 1out0.jpg */; };
 		21DC046A1F1A68DA0097CABB /* 1out1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DC044C1F1A68DA0097CABB /* 1out1.jpg */; };
 		21DC046B1F1A68DA0097CABB /* 1out2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DC044D1F1A68DA0097CABB /* 1out2.jpg */; };
@@ -81,6 +83,7 @@
 		2109BBFB1F0BD3F70042F873 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpeg; path = ../BulletTimeControl/3.jpeg; sourceTree = "<group>"; };
 		2109BC041F0BD4210042F873 /* TestGifWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGifWriter.swift; sourceTree = "<group>"; };
 		2109BC091F0BDAB20042F873 /* CameraImageRetrieverCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraImageRetrieverCollection.swift; sourceTree = "<group>"; };
+		21950C2C1F51D33A003A92B4 /* CameraSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraSettingsViewController.swift; sourceTree = "<group>"; };
 		21DC044B1F1A68DA0097CABB /* 1out0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1out0.jpg; sourceTree = "<group>"; };
 		21DC044C1F1A68DA0097CABB /* 1out1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1out1.jpg; sourceTree = "<group>"; };
 		21DC044D1F1A68DA0097CABB /* 1out2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1out2.jpg; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 				2109BC091F0BDAB20042F873 /* CameraImageRetrieverCollection.swift */,
 				2109BBE21F0A78720042F873 /* BulletTimeCapture.swift */,
 				2109BBE81F0BD3380042F873 /* GIFWriter.swift */,
+				21950C2C1F51D33A003A92B4 /* CameraSettingsViewController.swift */,
 			);
 			path = BulletTimeControl;
 			sourceTree = "<group>";
@@ -399,6 +403,7 @@
 				2109BBE91F0BD3380042F873 /* GIFWriter.swift in Sources */,
 				2109BBC31F0A648B0042F873 /* AppDelegate.swift in Sources */,
 				2109BBE01F0A650D0042F873 /* CameraImageRetreiver.swift in Sources */,
+				21950C2D1F51D33A003A92B4 /* CameraSettingsViewController.swift in Sources */,
 				2109BC0A1F0BDAB20042F873 /* CameraImageRetrieverCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +417,7 @@
 				2109BBE41F0A78720042F873 /* BulletTimeCapture.swift in Sources */,
 				2109BBEA1F0BD3380042F873 /* GIFWriter.swift in Sources */,
 				2109BC051F0BD4210042F873 /* TestGifWriter.swift in Sources */,
+				21950C2E1F51D33A003A92B4 /* CameraSettingsViewController.swift in Sources */,
 				2109BC0B1F0BDAB20042F873 /* CameraImageRetrieverCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

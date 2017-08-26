@@ -28,6 +28,10 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
         }
     }
     
+    @IBAction func settingsTapped(_ sender: Any) {
+        
+    }
+    
     @IBAction func shareButtonTapped(_ sender: NSButton) {
         let sharing = NSSharingServicePicker(items: [NSURL(fileURLWithPath: "/tmp/capture.gif")])
         sharing.show(relativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.minY)
