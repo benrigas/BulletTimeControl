@@ -10,7 +10,7 @@ import Cocoa
 
 class CameraImageRetrieverCollection: NSObject, CameraImageRetreiverDelegate {
     
-    let numberOfCameras = 4
+    let numberOfCameras = 24
     var delegate: CameraImageRetrieverCollectionDelegate?
     var imageRetrievers = [CameraImageRetreiver]()
     var bulletTimeCapture: BulletTimeCapture?
@@ -22,7 +22,7 @@ class CameraImageRetrieverCollection: NSObject, CameraImageRetreiverDelegate {
     }
     
     func setupRetrievers() {
-        for i in 0...self.numberOfCameras - 1 {
+        for i in 1...self.numberOfCameras {
             let imageRetriever = CameraImageRetreiver(cameraNumber: i, urlString: "http://picam\(i).local:5000/takePhotoNow?delay=0")
             imageRetrievers.append(imageRetriever)
         }
