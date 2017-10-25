@@ -24,7 +24,7 @@ class BulletTimeCapture: NSObject {
     func allTheImagesInOrder() -> [NSImage] {
         var allTheImages = [NSImage]()
         
-        for i in 0...numberOfCameras-1 {
+        for i in 1...numberOfCameras {
             allTheImages.append(images[i]!)
         }
         
@@ -33,7 +33,7 @@ class BulletTimeCapture: NSObject {
     
     func hasImagesForEachCamera() -> Bool {
         var hasAllTheImages = true
-        for i in 0...numberOfCameras-1 {
+        for i in 1...numberOfCameras {
             if !images.keys.contains(i) {
                 hasAllTheImages = false
                 break

@@ -17,6 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
 //        URLCache.setSharedCache(URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil))
         URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
+        
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

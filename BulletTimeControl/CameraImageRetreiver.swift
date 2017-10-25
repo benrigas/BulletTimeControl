@@ -23,7 +23,7 @@ class CameraImageRetreiver: NSObject {
         
         let task = URLSession.shared.dataTask(with: self.url) { (data, response, error) in
             if let data = data, let image = NSImage(data: data) {
-                self.delegate?.imageRetrieved(cameraNumber: self.cameraNumber, image: image)
+                self.delegate?.imageRetrieved(cameraNumber: self.cameraNumber, image: image, data: data)
             } else {
                 print("Something went wrong, missed image from camera \(self.cameraNumber)")
             }
@@ -34,5 +34,5 @@ class CameraImageRetreiver: NSObject {
 }
 
 protocol CameraImageRetreiverDelegate {
-    func imageRetrieved(cameraNumber: Int, image: NSImage)
+    func imageRetrieved(cameraNumber: Int, image: NSImage, data: Data)
 }

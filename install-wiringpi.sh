@@ -3,6 +3,7 @@
 ssh pi@picam1.local sudo apt-get install wiringpi &
 ssh pi@picam2.local sudo apt-get install wiringpi &
 ssh pi@picam3.local sudo apt-get install wiringpi &
+ssh pi@picam4.local sudo apt-get install wiringpi &
 ssh pi@picam5.local sudo apt-get install wiringpi &
 ssh pi@picam6.local sudo apt-get install wiringpi &
 ssh pi@picam7.local sudo apt-get install wiringpi &

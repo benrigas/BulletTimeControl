@@ -10,10 +10,10 @@ import Cocoa
 
 class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
 
-
-
     @IBOutlet weak var imageView: NSImageView!
     let imageCollector = CameraImageRetrieverCollection()
+    var currentCapture: BulletTimeCapture?
+    var currentCaptureDirectory: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +38,36 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
     }
     
     @IBAction func takePhotoTapped(_ sender: Any) {
+        currentCapture = nil
         imageCollector.delegate = self
         imageCollector.getPhotosFromAllTheCameras()
     }
     
-    func bulletTimeCaptureReady(capture: BulletTimeCapture) {
-        let result = GIFWriter.exportAnimatedGif(toFilePath: NSURL(fileURLWithPath: "/tmp/capture.gif"), withImages: capture.allTheImagesInOrder())
+    // called after all the image collectors finish
+    func bulletTimeCaptureReady(capture: BulletTimeCapture, captureDirectory: URL) {
+        currentCapture = capture
+        currentCaptureDirectory = captureDirectory
+        let gifURL = captureDirectory.appendingPathComponent("capture.gif") as NSURL
+
+        let result = GIFWriter.exportAnimatedGif(toFilePath: gifURL, withImages: capture.allTheImagesInOrder())
         
         print("Wrote gif with result \(result)")
         
+        runMovieMakerScript()
+        
         DispatchQueue.main.async {
-            self.imageView.image = NSImage(contentsOfFile: "/tmp/capture.gif")
+            self.imageView.image = NSImage(contentsOfFile: gifURL.path!)
             self.imageView.animates = true
+        }
+    }
+    
+    func runMovieMakerScript() {
+        if let path = currentCaptureDirectory?.path {
+            let task = Process()
+            task.launchPath = "/Users/benrigas/BulletTimeControl/gif2movie.sh"
+            task.arguments = [path]
+            task.launch()
+            task.waitUntilExit()
         }
     }
 

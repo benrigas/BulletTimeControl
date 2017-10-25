@@ -9,7 +9,7 @@
 import Cocoa
 
 struct ImageConstants {
-    static let gifDelayTime: NSNumber = 0.15
+    static let gifDelayTime: NSNumber = 0.13
     static let gifLoopCount:NSNumber = 10
 }
 
