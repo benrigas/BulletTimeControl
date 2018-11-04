@@ -14,6 +14,7 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
     let imageCollector = CameraImageRetrieverCollection()
     var currentCapture: BulletTimeCapture?
     var currentCaptureDirectory: URL?
+    var calibrator = CameraCalibrator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,9 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
             task.waitUntilExit()
         }
     }
-
+    
+    @IBAction func doTheCalibrationMagic(_ sender: Any) {
+        calibrator.calibrate()
+    }
 }
 

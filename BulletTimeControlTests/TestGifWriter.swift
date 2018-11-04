@@ -63,4 +63,39 @@ class TestGifWriter: XCTestCase {
         
     }
 
+    func testmore24() {
+        let images = [
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture0.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture1.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture2.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture3.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture4.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture5.jpg")!,
+
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture6.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture7.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture8.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture9.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture10.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture11.jpg")!,
+
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture12.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture13.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture14.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture15.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture16.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture17.jpg")!,
+
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture18.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture19.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture20.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture21.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture22.jpg")!,
+            NSImage (contentsOfFile: "/Users/benrigas/Desktop/bullet time good ones/automagic/imgnew/capture23.jpg")!,
+        ]
+        
+        let result = GIFWriter.exportAnimatedGif(toFilePath: URL(fileURLWithPath: "/tmp/foo24.gif") as NSURL, withImages: images)
+        XCTAssertTrue(result)
+        
+    }
 }
