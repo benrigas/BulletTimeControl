@@ -9,7 +9,6 @@
 import Cocoa
 
 class CameraCalibrator: NSObject {
-    
     let imageCollector = CameraImageRetrieverCollection()
 }
 
@@ -17,13 +16,21 @@ extension CameraCalibrator: CameraImageRetrieverCollectionDelegate {
     func bulletTimeCaptureReady(capture: BulletTimeCapture, captureDirectory: URL) {
         let path = captureDirectory.path
         let task = Process()
-        task.launchPath = "/Users/benrigas/BulletTimeControl/calculate_offsets.py"
+        task.launchPath = "/Users/benrigas/BulletTimeControl/calculate-offsets.py"
         task.arguments = [path]
+        
+        let outPipe = Pipe()
+        task.standardOutput = outPipe
+        
         if #available(OSX 10.13, *) {
             do {
                 try task.run()
-                task.waitUntilExit()
-                print("output=\(task.standardOutput ?? "ruh roh")")
+//                let handle = outPipe.fileHandleForReading
+//                let data = handle.readDataToEndOfFile()
+//                if let outputString = String (data: data, encoding: String.Encoding.utf8) {
+//                print("OUTPUT YO: \(outputString)")
+//                    parseCalcuatedCenterAndSaveOffsets(output: outputString)
+//                }
             } catch {
                 print("boo.. \(task.terminationReason)")
             }
@@ -34,7 +41,7 @@ extension CameraCalibrator: CameraImageRetrieverCollectionDelegate {
 //        task.waitUntilExit()
 //        print("output=\(task.standardOutput ?? "ruh roh")")
     }
-    
+        
     func calibrate() {
         imageCollector.delegate = self
         imageCollector.getPhotosFromAllTheCameras()

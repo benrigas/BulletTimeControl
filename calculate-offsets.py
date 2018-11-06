@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python
 
 import numpy as np
 import imutils
@@ -42,7 +42,7 @@ def get_image_center(image_file):
 				(0, 255, 255), 2)
 			cv2.circle(frame, center, 5, (0, 0, 255), -1)
 
-	print "Center is %s" % (center,)
+	#print "Center is %s" % (center,)
 	# show the images
 	#cv2.imshow("images", np.hstack([image, output]))
 	#cv2.waitKey(0)
@@ -55,11 +55,14 @@ actualCenter = (376,450)
 
 captureDir = sys.argv[1]
 
-for x in range(1, 24):
+f = open("/tmp/cameraCenters", "w")
+
+for x in range(1, 25):
 	imageName = "capture%d.jpg" % (x)
 	center = get_image_center("%s/%s" % (captureDir, imageName))
 	diffX = actualCenter[0] - center[0]
 	diffY = actualCenter[1] - center[1]
-	print "Diff is %d, %d" % (diffX, diffY)
+	f.write("%d %d\n" % (center[0], center[1]))
+	#print "Diff is %d, %d" % (diffX, diffY)
 	#shiftImage(imageName, diffX, diffY)
 

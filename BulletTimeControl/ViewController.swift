@@ -48,6 +48,9 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
     func bulletTimeCaptureReady(capture: BulletTimeCapture, captureDirectory: URL) {
         currentCapture = capture
         currentCaptureDirectory = captureDirectory
+        
+        runApplyOffsetsScript()
+        
         let gifURL = captureDirectory.appendingPathComponent("capture.gif") as NSURL
 
         let result = GIFWriter.exportAnimatedGif(toFilePath: gifURL, withImages: capture.allTheImagesInOrder())
@@ -59,6 +62,16 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
         DispatchQueue.main.async {
             self.imageView.image = NSImage(contentsOfFile: gifURL.path!)
             self.imageView.animates = true
+        }
+    }
+    
+    func runApplyOffsetsScript() {
+        if let path = currentCaptureDirectory?.path {
+            let task = Process()
+            task.launchPath = "/Users/benrigas/BulletTimeControl/apply-offsets.py"
+            task.arguments = [path]
+            task.launch()
+            task.waitUntilExit()
         }
     }
     
