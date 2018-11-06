@@ -739,6 +739,17 @@
                                     <action selector="doTheCalibrationMagic:" target="XfG-lQ-9wD" id="CJ2-Tg-sHp"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-xh-lxg">
+                                <rect key="frame" x="643" y="507" width="72" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Boop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btl-fl-0Me">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="boopTapped:" target="XfG-lQ-9wD" id="An7-CI-j3V"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

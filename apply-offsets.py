@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python
 
 import numpy as np
 import imutils
@@ -7,7 +7,7 @@ import os
 import sys
 
 def shiftImage(image, x, y):
-	os.system("convert %s -page +%d+%d -background none -flatten %s" % (image, x, y, image))
+	os.system("/usr/local/bin/convert %s -page +%d+%d -background none -flatten %s" % (image, x, y, image))
 
 actualCenter = (376,450)
 

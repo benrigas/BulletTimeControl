@@ -34,12 +34,19 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
     }
     
     @IBAction func shareButtonTapped(_ sender: NSButton) {
-        let sharing = NSSharingServicePicker(items: [NSURL(fileURLWithPath: "/tmp/capture.gif")])
-        sharing.show(relativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.minY)
+        if let shareURL = currentCaptureDirectory?.appendingPathComponent("capture.mp4") {
+            let sharing = NSSharingServicePicker(items: [shareURL])
+            sharing.show(relativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.minY)
+        }
+    }
+    
+    @IBAction func boopTapped(_ sender: Any) {
+        MulticastSender.sendBroadcast()
     }
     
     @IBAction func takePhotoTapped(_ sender: Any) {
         currentCapture = nil
+        imageView.image = nil
         imageCollector.delegate = self
         imageCollector.getPhotosFromAllTheCameras()
     }
@@ -53,9 +60,9 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
         
         let gifURL = captureDirectory.appendingPathComponent("capture.gif") as NSURL
 
-        let result = GIFWriter.exportAnimatedGif(toFilePath: gifURL, withImages: capture.allTheImagesInOrder())
-        
-        print("Wrote gif with result \(result)")
+        //let result = GIFWriter.exportAnimatedGif(toFilePath: gifURL, withImages: capture.allTheImagesInOrder())
+        runMakeGifScript()
+//        print("Wrote gif with result \(result)")
         
         runMovieMakerScript()
         
@@ -69,6 +76,16 @@ class ViewController: NSViewController, CameraImageRetrieverCollectionDelegate {
         if let path = currentCaptureDirectory?.path {
             let task = Process()
             task.launchPath = "/Users/benrigas/BulletTimeControl/apply-offsets.py"
+            task.arguments = [path]
+            task.launch()
+            task.waitUntilExit()
+        }
+    }
+    
+    func runMakeGifScript() {
+        if let path = currentCaptureDirectory?.path {
+            let task = Process()
+            task.launchPath = "/Users/benrigas/BulletTimeControl/create-gif.sh"
             task.arguments = [path]
             task.launch()
             task.waitUntilExit()
