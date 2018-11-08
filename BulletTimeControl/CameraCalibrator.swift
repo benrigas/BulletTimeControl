@@ -10,6 +10,15 @@ import Cocoa
 
 class CameraCalibrator: NSObject {
     let imageCollector = CameraImageRetrieverCollection()
+
+    func calibrateWithMulticast() {
+        let currentCaptureDirectory = URL(fileURLWithPath: "/Users/benrigas/Documents/BulletTime/current")
+        ScriptUtil.runResetCurrentCaptureScript()
+        MulticastSender.sendBroadcast()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            self.bulletTimeCaptureReady(capture: BulletTimeCapture(numberOfCameras: 24), captureDirectory: currentCaptureDirectory)
+        }
+    }
 }
 
 extension CameraCalibrator: CameraImageRetrieverCollectionDelegate {

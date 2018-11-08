@@ -689,17 +689,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="754" height="555"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDW-hc-Vlx">
-                                <rect key="frame" x="14" y="507" width="108" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Take photo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LaX-yU-vTa">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="takePhotoTapped:" target="XfG-lQ-9wD" id="d98-gm-Bs1"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gKg-1f-q5a">
                                 <rect key="frame" x="388" y="507" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -711,25 +700,13 @@
                                     <action selector="shareButtonTapped:" target="XfG-lQ-9wD" id="UQ3-mO-hTF"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTX-JI-tMI">
-                                <rect key="frame" x="344" y="507" width="44" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAdvanced" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="91i-QF-F18">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="settingsTapped:" target="XfG-lQ-9wD" id="bYX-cR-f5n"/>
-                                    <segue destination="Bli-6G-I7G" kind="sheet" id="bPd-bs-b6J"/>
-                                </connections>
-                            </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chn-xw-rof">
                                 <rect key="frame" x="17" y="17" width="720" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" id="CKY-ok-Kt2"/>
                             </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3m6-1t-q4M">
-                                <rect key="frame" x="487" y="507" width="99" height="32"/>
+                                <rect key="frame" x="289" y="507" width="99" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Calibrate!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JfA-zu-rH3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -740,14 +717,25 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-xh-lxg">
-                                <rect key="frame" x="643" y="507" width="72" height="32"/>
+                                <rect key="frame" x="14" y="507" width="197" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Boop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btl-fl-0Me">
+                                <buttonCell key="cell" type="push" title="Take Photo (MULTICAST!)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btl-fl-0Me">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="boopTapped:" target="XfG-lQ-9wD" id="An7-CI-j3V"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDW-hc-Vlx">
+                                <rect key="frame" x="601" y="507" width="139" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="(old) Take photo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LaX-yU-vTa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="takePhotoTapped:" target="XfG-lQ-9wD" id="d98-gm-Bs1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1274,7 +1262,4 @@
             <point key="canvasLocation" x="1042" y="362"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NSAdvanced" width="128" height="128"/>
-    </resources>
 </document>

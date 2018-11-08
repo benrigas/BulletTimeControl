@@ -21,7 +21,7 @@
     NSData *            payloadData;
     ssize_t            bytesSent;
     
-    wifiInterface = if_nametoindex("en0");
+    wifiInterface = if_nametoindex("en7");
     assert(wifiInterface != 0);
     
     fd = socket(AF_INET, SOCK_DGRAM, 0);

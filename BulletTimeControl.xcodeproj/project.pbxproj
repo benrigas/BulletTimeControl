@@ -54,6 +54,7 @@
 		21DC04811F1A68DA0097CABB /* capture.sh in Resources */ = {isa = PBXBuildFile; fileRef = 21DC04681F1A68DA0097CABB /* capture.sh */; };
 		21F0EA1D218F8AD800717CBC /* CameraCalibrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0EA1C218F8AD800717CBC /* CameraCalibrator.swift */; };
 		21F0EA212191D96900717CBC /* MulticastSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F0EA202191D96900717CBC /* MulticastSender.m */; };
+		21F0EA232194AB2B00717CBC /* ScriptUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0EA222194AB2B00717CBC /* ScriptUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		21F0EA1E2191D96900717CBC /* BulletTimeControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BulletTimeControl-Bridging-Header.h"; sourceTree = "<group>"; };
 		21F0EA1F2191D96900717CBC /* MulticastSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MulticastSender.h; sourceTree = "<group>"; };
 		21F0EA202191D96900717CBC /* MulticastSender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MulticastSender.m; sourceTree = "<group>"; };
+		21F0EA222194AB2B00717CBC /* ScriptUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				21F0EA1F2191D96900717CBC /* MulticastSender.h */,
 				21F0EA202191D96900717CBC /* MulticastSender.m */,
 				21F0EA1E2191D96900717CBC /* BulletTimeControl-Bridging-Header.h */,
+				21F0EA222194AB2B00717CBC /* ScriptUtil.swift */,
 			);
 			path = BulletTimeControl;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			files = (
 				2109BBC51F0A648B0042F873 /* ViewController.swift in Sources */,
 				2109BBE31F0A78720042F873 /* BulletTimeCapture.swift in Sources */,
+				21F0EA232194AB2B00717CBC /* ScriptUtil.swift in Sources */,
 				2109BBE91F0BD3380042F873 /* GIFWriter.swift in Sources */,
 				2109BBC31F0A648B0042F873 /* AppDelegate.swift in Sources */,
 				2109BBE01F0A650D0042F873 /* CameraImageRetreiver.swift in Sources */,
